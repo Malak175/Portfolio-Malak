@@ -6,6 +6,7 @@ import sheImg from "@/assets/SH.E.png";
 import rmImg from "@/assets/R.M.png";
 import tabeebakImg from "@/assets/tabeebak.png";
 import adminImg from "@/assets/admintabeebak.png";
+import portfolioImg from "@/assets/portfolio.png";
 
 export type ProjectCategory = "React" | "HTML • CSS • JavaScript";
 
@@ -23,6 +24,19 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "Premium Developer Portfolio",
+    description:
+      "Designed and developed a premium personal portfolio using React, TypeScript, Tailwind CSS, and Framer Motion to showcase my projects, technical skills, certifications, and experience. Built reusable components, smooth animations, responsive layouts, project filtering, and an engaging UI focused on performance and accessibility.",
+    longDescription:
+      "Designed and developed a premium personal portfolio using React, TypeScript, Tailwind CSS, and Framer Motion to showcase my projects, technical skills, certifications, and experience. Built reusable components, smooth animations, responsive layouts, project filtering, and an engaging UI focused on performance and accessibility.",
+    image: portfolioImg,
+    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+    category: "React",
+    github: "https://github.com/Malak175/Portfolio",
+    demo: "https://malakmahmoudportfolio.vercel.app/",
+    featured: true,
+  },
   {
     title: "Tabeebak",
     description:
