@@ -14,7 +14,6 @@ import {
   Code2,
   Copy,
   Download,
-  ExternalLink,
   Globe,
   GraduationCap,
   Layers,
@@ -35,6 +34,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { toast } from "sonner";
 
 import malakPhoto from "@/assets/malak.jpeg";
+import { CV_URL } from "@/config/constants";
 import { cn } from "@/lib/utils";
 import {
   achievements,
@@ -46,7 +46,6 @@ import {
   projects,
   testimonials,
   type Project,
-  type ProjectCategory,
 } from "./data";
 import {
   SiHtml5,
@@ -72,7 +71,7 @@ import {
 /* -------------------- Utilities -------------------- */
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as const } },
 };
 
 function Section({
@@ -413,8 +412,9 @@ function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={profile.cv}
-              download
+              href={CV_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-105"
             >
               <Download className="h-4 w-4 transition-transform group-hover:-translate-y-0.5" />
@@ -607,12 +607,12 @@ function Skills() {
 
   const badgeVariants = {
     hidden: { opacity: 0, y: 12 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.16, 1, 0.3, 1] as const } },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const } },
   };
 
   return (
@@ -677,7 +677,7 @@ function ProjectCard({ p }: { p: Project }) {
       initial={{ opacity: 0, y: 24, scale: 0.96 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -18, scale: 0.96 }}
-      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
       whileHover={{ y: -8, scale: 1.01, transition: { duration: 0.25 } }}
       className="group overflow-hidden rounded-[28px] border border-border/50 bg-background/80 shadow-[0_18px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-all duration-500 hover:border-primary/40 hover:shadow-[0_24px_90px_rgba(59,130,246,0.16)]"
     >

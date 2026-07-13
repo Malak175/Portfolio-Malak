@@ -298,7 +298,6 @@ export const profile = {
   phone: "+201558520651",
   github: "https://github.com/Malak175",
   linkedin: "https://www.linkedin.com/in/malak-zayed-a5674a322",
-  cv: "/Malak_Mahmoud_CV.pdf",
   intro:
     "Front-End Developer with a degree in Information Technology, passionate about building responsive and user-friendly web applications using React.js, JavaScript, and modern web technologies. I enjoy creating clean, intuitive interfaces and continuously improving my skills through real-world development experience.",
 };
